@@ -1,1 +1,1 @@
--[neo4j ruby course](https://neo4j.com/developer/ruby-course/)
+- [neo4j ruby course](https://neo4j.com/developer/ruby-course/)
