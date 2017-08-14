@@ -1,4 +1,5 @@
 class Book < Asset
+  include Neo4j::ActiveNode
   id_property :isbn
   property :year_published, type: Integer
 
