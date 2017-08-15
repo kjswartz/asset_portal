@@ -28,6 +28,7 @@ module AssetPortal
     # Note that embedded db is only available for JRuby
      config.neo4j.session.type = :http
      config.neo4j.session.url = 'http://localhost:7474'
+     config.neo4j.pretty_logged_cypher_queries = true
     #  or
     # config.neo4j.session.type = :bolt
     # config.neo4j.session.url = 'bolt://localhost:7687'

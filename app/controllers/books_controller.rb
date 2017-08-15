@@ -4,7 +4,10 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
+    @books = Book.all.with_associations(:author, :categories)
+
+    @recommendations = Book.recommendations
+    @recommendations = Hash[*@recommendations.flatten(1)]
   end
 
   # GET /books/1
@@ -67,6 +70,6 @@ class BooksController < ApplicationController
     end
 
     def book_params
-      params.require(:book).permit(:isbn, :title, :year_published, :author, :category)
+       params.require(:book).permit(:isbn, :title, :year_published, :author, category_ids: [])
     end
 end
